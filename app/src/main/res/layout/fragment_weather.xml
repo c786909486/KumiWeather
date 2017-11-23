@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:ignore="NamespaceTypo">
+<ImageView
+    android:id="@+id/show_weather_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/sun_day_bg"
+    android:scaleType="fitXY"
+   />
+    <View
+        android:id="@+id/bg_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#60000000"
+        android:alpha="0"/>
+
+    <LinearLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--标题栏-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@android:color/transparent">
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/city_title_name"
+                app:text="杭州"
+                android:textColor="@color/white"
+                />
+            <ImageView
+                android:id="@+id/add_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/add"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                />
+
+        </RelativeLayout>
+        <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+
+
+            <cn.ckz.kumiweather.view.view.ObservableScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--天气实况-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_centerInParent="true">
+                            <TextView
+                                android:id="@+id/now_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="72sp"
+                                android:text="@string/n_a"
+                                app:text="17°"
+                                android:includeFontPadding="false"/>
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/fenggefu">
+                            </View>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="left">
+                                <ImageView
+                                    android:id="@+id/weather_logo"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:src="@mipmap/sun" />
+                                <TextView
+                                    android:id="@+id/weather_now"
+                                    style="@style/normal_text_style"
+                                    android:text="@string/n_a"
+                                    app:text="晴"
+                                    android:layout_marginLeft="10dp" />
+                                <TextView
+                                    android:id="@+id/min_to_max"
+                                    android:text="@string/n_a"
+                                    style="@style/normal_text_style"
+                                    android:layout_marginLeft="10dp"
+                                    app:text="12°~22°"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                    <!--今日实时预报-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/today_week"
+                            style="@style/normal_text_style"
+                            app:text="星期四" />
+                        <TextView
+                            style="@style/normal_text_style"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:text="@string/today" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fenggefu"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/hour_forest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fenggefu"/>
+                    <!--七日预报-->
+                    <cn.ckz.kumiweather.view.view.MyListView
+                        android:id="@+id/daily_forest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"
+                        android:divider="@color/fenggefu"
+                        android:dividerHeight="1px"
+                        android:listSelector="@android:color/transparent"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fenggefu"/>
+                    <!--空气质量-->
+                    <TextView
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        style="@style/normal_text_style"
+                        android:text="@string/qulity"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fenggefu"/>
+                    <include layout="@layout/layout_quality"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/fenggefu"/>
+                    <TextView
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        style="@style/normal_text_style"
+                        android:text="@string/life_style"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+                    <include layout="@layout/layout_life_style"/>
+
+
+                </LinearLayout>
+
+            </cn.ckz.kumiweather.view.view.ObservableScrollView>
+
+
+        </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/update_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+</RelativeLayout>

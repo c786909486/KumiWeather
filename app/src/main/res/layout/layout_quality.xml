@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:showDividers="middle"
+    android:divider="@drawable/diver_line">
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="空气质量指数
+(API)"
+            />
+        <TextView
+            android:id="@+id/aqi_data"
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一氧化碳
+(CO)"
+            />
+        <TextView
+            android:id="@+id/co_data"
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       >
+        <TextView
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="二氧化氮
+(NO2)"
+            />
+        <TextView
+            android:id="@+id/no2_data"
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="臭氧
+(O3)"
+            />
+        <TextView
+            android:id="@+id/o3_data"
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="PM10"
+            />
+        <TextView
+            android:id="@+id/pm10_data"
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="PM2.5"
+            />
+        <TextView
+            android:id="@+id/pm25_data"
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       >
+        <TextView
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="空气质量"
+            />
+        <TextView
+            android:id="@+id/qlty_data"
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="二氧化硫
+(SO2)"
+            />
+        <TextView
+            android:id="@+id/so_data"
+            style="@style/quality_text_style"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

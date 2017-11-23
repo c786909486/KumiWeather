@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+        <TextView
+            android:id="@+id/time"
+            style="@style/normal_text_style"
+            />
+        <ImageView
+            android:id="@+id/weather_logo"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/sun"/>
+        <TextView
+            android:id="@+id/temp"
+            style="@style/normal_text_style" />
+    </LinearLayout>
+
+</LinearLayout>

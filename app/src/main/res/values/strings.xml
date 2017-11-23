@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KumiWeather</string>
+    <string name="today">今天</string>
+    <string name="qulity">空气质量</string>
+    <string name="life_style">生活指数</string>
+    <string name="n_a">N/A</string>
+    <string name="aqi_ch">空气质量指数</string>
+    <string name="aqi_en">(AQI)</string>
+    <string name="city_manager">城市管理</string>
+
+</resources>
